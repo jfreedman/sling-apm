@@ -330,6 +330,18 @@
                         <enabled>false</enabled>
                     </snapshots>
                 </repository>
+                <repository>
+                    <id>central</id>
+                    <name>Central Repository</name>
+                    <url>https://repo1.maven.org/maven2/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                        <updatePolicy>never</updatePolicy>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
             </repositories>
 
             <pluginRepositories>
@@ -525,6 +537,11 @@
                 <groupId>com.newrelic.agent.java</groupId>
                 <artifactId>newrelic-api</artifactId>
                 <version>4.7.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.appdynamics.agent</groupId>
+                <artifactId>agent-api</artifactId>
+                <version>20.4.0.29862</version>
             </dependency>
             <dependency>
                 <groupId>co.elastic.apm</groupId>
