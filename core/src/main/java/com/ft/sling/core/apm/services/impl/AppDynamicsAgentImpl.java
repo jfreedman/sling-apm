@@ -38,10 +38,8 @@ public class AppDynamicsAgentImpl implements ApmAgent {
         Transaction appdTransaction = null;
         try {
             appdTransaction = AppdynamicsAgent.startTransaction("Sling Request", null, EntryTypes.HTTP, false);
-        } finally {
-            if (appdTransaction != null) {
-                appdTransaction.endSegment();
-            }
+        } catch (Exception ex) {
+            log.error("error setting AppDynamics event", ex);
         }
         return appdTransaction;
     }
